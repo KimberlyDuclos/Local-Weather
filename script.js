@@ -1,31 +1,6 @@
 var farTemp, celTemp;
-var lat, long;
-
-$(document).ready(function() {
-	function getLocation() {
-		if (navigator.geolocation) {
-			  navigator.geolocation.getCurrentPosition(function(position) {
-				
-				// set variables to obtained location from above
-				lat = position.coords.latitude;
-				long = position.coords.longitude;
-				
-				// set JSON data to location variables, "lat" and "long" after converting to string for URL
-				$.getJSON("https://fcc-weather-api.glitch.me/api/current?lat=" + String(lat) + "&lon=" + String(long), function(json) {
-				
-				// temp variables and conversion rounded to nearest whole number
-				farTemp = Math.floor(json.main.temp * 1.8 + 32);
-				celTemp = JSON.stringify(Math.floor(json.main.temp));
-				// output data
-				document.getElementById("location").innerHTML = json.name;
-				document.getElementById("temp").innerHTML = farTemp;
-				document.getElementById("weather").innerHTML = json.weather[0].description;
-			}); 
-		}); 
-	}
-}
-});
-
+var lat, long, weatherLoc;
+var weatherCondition;
 // output temperautre in F
 function fTemp() {
 	document.getElementById("temp").innerHTML = farTemp + "°F";
@@ -34,7 +9,24 @@ function fTemp() {
 function cTemp() {
 	document.getElementById("temp").innerHTML = celTemp + "°C";
 } // close cTemp
-// get location
 
-fTemp();
-cTemp();
+// get location
+$(document).ready(function() {
+  if (navigator.geolocation) {
+	  navigator.geolocation.getCurrentPosition(function(position) {
+		  // set variables to obtained location from above
+			lat = position.coords.latitude;
+			long = position.coords.longitude;
+			// set JSON data to location variables, "lat" and "long" after converting to string for URL
+			$.getJSON("https://fcc-weather-api.glitch.me/api/current?lat=" + String(lat) + "&lon=" + String(long), function(json) {
+			  // temp variables and conversion rounded to nearest whole number
+				farTemp = Math.floor(json.main.temp * 1.8 + 32);
+				celTemp = JSON.stringify(Math.floor(json.main.temp));
+				// output data
+				document.getElementById("location").innerHTML = json.name;
+				document.getElementById("temp").innerHTML = farTemp + "°F";
+				document.getElementById("weather").innerHTML = json.weather[0].description;
+      }); // close getJSON
+		}); // close getLocation
+  }
+}); // close document ready

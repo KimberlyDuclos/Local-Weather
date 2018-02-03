@@ -1,21 +1,24 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="script.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+ 
 <html>
 <head>
-	<meta charset="UTF-8">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script type="text/javascript" src="script.js"></script>
-	<link rel="stylesheet" type="text/css" href="style.css">
-
-<title>Local Weather</title>
+	<title>Local Weather</title>
 </head>
 <body>
 	<div class="box">
-		<div id="temp">
-			<button onclick="cTemp()">C</button>
-			<button onclick="fTemp()">F</button>
-		</div>
-			<div id="location"></div>
-			<div id="weather"></div>
-	</div>
+        
+		<div id="temp">Loading...</div>
+    
+    <button id="C" onclick="cTemp()">C</button> <button id="F" onclick="fTemp()">F</button>
+		<div id="location"></div>
+		<div id="weather"></div>
+    <div id="weatherIcon"></div>  
+
+    
+	</div> <!--close box-->
 </body>
 </html>
