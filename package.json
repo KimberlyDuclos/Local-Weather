@@ -1,0 +1,23 @@
+{
+  "name": "local-weather",
+  "version": "1.0.0",
+  "description": "Displays, temp, weather condition and matching icon",
+  "main": "script.js",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KimberlyDuclos/Local-Weather.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KimberlyDuclos/Local-Weather/issues"
+  },
+  "homepage": "https://github.com/KimberlyDuclos/Local-Weather#readme"
+}
