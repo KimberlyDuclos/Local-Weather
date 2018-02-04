@@ -2,7 +2,7 @@ var farTemp, celTemp;
 var lat, long;
 
 
-// output temperautre in F
+// output temperautre in Far
 function fTemp() {
 	document.getElementById("temp").innerHTML = farTemp + "°F";
 } // close fTemp
