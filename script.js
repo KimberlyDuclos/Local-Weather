@@ -11,7 +11,7 @@ function cTemp() {
 	document.getElementById("temp").innerHTML = celTemp + "°C";
 } // close cTemp
 
-// get location
+// get location from geolocator
 $(document).ready(function() {
   if (navigator.geolocation) {
 	  navigator.geolocation.getCurrentPosition(function(position) {
