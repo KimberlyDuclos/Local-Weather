@@ -1,7 +1,7 @@
 var farTemp, celTemp;
-var lat, long, weatherLoc;
-var weatherCondition;
-var weatherIcon;
+var lat, long;
+
+
 // output temperautre in F
 function fTemp() {
 	document.getElementById("temp").innerHTML = farTemp + "°F";
