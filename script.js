@@ -6,7 +6,7 @@ var lat, long;
 function fTemp() {
 	document.getElementById("temp").innerHTML = farTemp + "°F";
 } // close fTemp
-// output temperature in C
+// output temperature in Celsius
 function cTemp() {
 	document.getElementById("temp").innerHTML = celTemp + "°C";
 } // close cTemp
