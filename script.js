@@ -1,6 +1,7 @@
 var farTemp, celTemp;
 var lat, long, weatherLoc;
 var weatherCondition;
+var weatherIcon;
 // output temperautre in F
 function fTemp() {
 	document.getElementById("temp").innerHTML = farTemp + "°F";
@@ -26,6 +27,7 @@ $(document).ready(function() {
 				document.getElementById("location").innerHTML = json.name;
 				document.getElementById("temp").innerHTML = farTemp + "°F";
 				document.getElementById("weather").innerHTML = json.weather[0].description;
+				document.getElementById("icon").src = (json.weather[0].icon);
       }); // close getJSON
 		}); // close getLocation
   }
