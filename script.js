@@ -30,5 +30,5 @@ $(document).ready(function() {
 				document.getElementById("icon").src = (json.weather[0].icon);
       }); // close getJSON
 		}); // close getLocation
-  }
+  } // close if statement
 }); // close document ready
