@@ -1,16 +1,17 @@
 var farTemp, celTemp;
-var lat, long, weatherLoc;
-var weatherCondition;
-// output temperautre in F
+var lat, long;
+
+
+// output temperautre in Far
 function fTemp() {
 	document.getElementById("temp").innerHTML = farTemp + "°F";
 } // close fTemp
-// output temperature in C
+// output temperature in Celsius
 function cTemp() {
 	document.getElementById("temp").innerHTML = celTemp + "°C";
 } // close cTemp
 
-// get location
+// get location from geolocator
 $(document).ready(function() {
   if (navigator.geolocation) {
 	  navigator.geolocation.getCurrentPosition(function(position) {
@@ -26,7 +27,8 @@ $(document).ready(function() {
 				document.getElementById("location").innerHTML = json.name;
 				document.getElementById("temp").innerHTML = farTemp + "°F";
 				document.getElementById("weather").innerHTML = json.weather[0].description;
+				document.getElementById("icon").src = (json.weather[0].icon);
       }); // close getJSON
 		}); // close getLocation
-  }
+  } // close if statement
 }); // close document ready

@@ -9,14 +9,20 @@
 	<title>Local Weather</title>
 </head>
 <body>
+	<!--box to hold output-->
 	<div class="box">
         
+		<!--loads instantly-->
 		<div id="temp">Loading...</div>
-    
-    <button id="C" onclick="cTemp()">C</button> <button id="F" onclick="fTemp()">F</button>
+		
+		<!--Celsius / Far buttons-->
+		<button id="C" onclick="cTemp()">C</button> <button id="F" onclick="fTemp()">F</button>
+		
+		<!--parsed JSON output to HTML-->
 		<div id="location"></div>
 		<div id="weather"></div>
-    <div id="weatherIcon"></div>  
+		<div id="weatherIcon"></div>  
+		<img id="icon" src="#"/>
 
     
 	</div> <!--close box-->
